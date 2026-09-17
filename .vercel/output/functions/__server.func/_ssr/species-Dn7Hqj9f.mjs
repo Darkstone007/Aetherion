@@ -1,0 +1,360 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/species-Dn7Hqj9f.js
+var SPECIES = [
+	{
+		id: "humans",
+		name: "Humans",
+		habitat: "Everywhere; City of Echoes",
+		look: "Adaptive bipeds. No innate racial peak. Diverse height, skin, build.",
+		affinity: "Balanced Kima / Anima",
+		figure: "Thalor the Bridge-Builder",
+		kima: "Hybrid classes. Fast leveling. No specialist cap other races have.",
+		history: "Mediators in wars. After the Fracture they adapted to the System faster than long-lived races.",
+		note: "After the Fracture, adaptability is the human advantage.",
+		image: "/art/azrael.jpg"
+	},
+	{
+		id: "demons",
+		name: "Demons",
+		habitat: "Rifts, Tezcal, Vindraeth",
+		look: "Horns, lava-glass cracks, bargains in the posture. Not automatically monstrous.",
+		affinity: "Demonic, Dark Arts",
+		figure: "Xal’thok — a choice, not a species trait",
+		kima: "Chaotic Anima. Explosive, corruptive.",
+		history: "Infernal bargains. The Betrayer used this body; the species did not vote for the Fracture.",
+		note: "Xal’thok is a person. Demons as a people are not the Betrayer.",
+		image: "/art/xalthok.jpg"
+	},
+	{
+		id: "beastmen",
+		name: "Beast Men",
+		habitat: "Nordheim wilds, Xihuang highlands, Tezcal packs",
+		look: "Fur, claws, tails, human intellect. Rengar is 6'6\" with a mane.",
+		affinity: "Beast Magic, Kima",
+		figure: "Rengar Clawheart",
+		kima: "Pack-law physicality. Rage as a resource.",
+		history: "Pre-Cataclysm clans. Verdant Schism opponents of Elves/Fae.",
+		note: "Pack is a law older than the System.",
+		image: "/art/rengar.jpg"
+	},
+	{
+		id: "elves",
+		name: "Elves",
+		habitat: "Groves, Caelus hubs, maple forests",
+		look: "Long-lived, pointed ears, slender, luminous skin.",
+		affinity: "Anima, Nature, Time",
+		figure: "Silas Aeonkeeper",
+		kima: "Old Anima advantage, now flattened by the System cap.",
+		history: "Verdant Schism. Many feel the System as an insult.",
+		note: "The System capped what would have grown with age anyway.",
+		image: "/art/silas.jpg"
+	},
+	{
+		id: "elementals",
+		name: "Elementals",
+		habitat: "Volcanoes, storms, mana veins",
+		look: "A force wearing a body: flame, water, stone, wind as hard color blocks.",
+		affinity: "Their element",
+		figure: "Primara Vortexborn",
+		kima: "You negotiate weather, you do not tax it.",
+		history: "Tezcal reaction-kin. Mortal-scale cousins of Kryoseth.",
+		note: "Not a people you census. A climate with a face.",
+		image: "/art/species-other.jpg"
+	},
+	{
+		id: "aliens",
+		name: "Aliens",
+		habitat: "Caelus isles, rifts",
+		look: "Wide variety: crystal tendrils, reactor-fused, psionic instead of small talk.",
+		affinity: "Psychokinesis, Gravity",
+		figure: "Zeth’kai Mindweaver / Zayden Cael-Ash",
+		kima: "Thought as pressure. Tech that is still Anima.",
+		history: "The sky was never empty. Clashed with Dawn Age heroes.",
+		note: "Aetherion is not the only world in its sky.",
+		image: "/art/species-other.jpg"
+	},
+	{
+		id: "birdmen",
+		name: "Birdmen",
+		habitat: "Cloudreach, floating isles",
+		look: "Wings, beaks or plumes, territorial grace. Aerial traders.",
+		affinity: "Wind, Light",
+		figure: "Aerion Stormplume / Skywarden Lirael",
+		kima: "Height as culture. Reckless dives.",
+		history: "Cloudreach Freeholds after the Verdant Schism.",
+		note: "Height is freedom and a fall risk.",
+		image: "/art/species-wild.jpg"
+	},
+	{
+		id: "ghosts",
+		name: "Ghosts",
+		habitat: "Vindraeth, unfinished places",
+		look: "Intangible, chain-light, unfinished business in the posture.",
+		affinity: "Necromancy, Shadow",
+		figure: "Wraithlyn Echochain",
+		kima: "Memory as restraint.",
+		history: "Not always enemies. Binders and chroniclers.",
+		note: "Some ghosts keep records the living will not.",
+		image: "/art/species-dark.jpg"
+	},
+	{
+		id: "ghouls",
+		name: "Ghouls",
+		habitat: "Camps, ruins, grave-edges",
+		look: "Gaunt, hunger-forward, rot-stench, unnatural strength.",
+		affinity: "Necromancy, Kima",
+		figure: "Unthroned — hunger is not ideology",
+		kima: "Strength without a court.",
+		history: "Vindraeth camps. Used, rarely led.",
+		note: "Hunger is not a government.",
+		image: "/art/species-dark.jpg"
+	},
+	{
+		id: "vampires",
+		name: "Vampires",
+		habitat: "Night courts, old blood-holds",
+		look: "Pale, precise, fangs, sunlight-allergic.",
+		affinity: "Shadow, Blood-as-Kima",
+		figure: "Night-court unnamed in the current chronicle",
+		kima: "Seduction is a class feature here, not a personality.",
+		history: "Old blood-holds survived the Fracture by becoming very good at forms. Moonlit Feuds with werewolves are ongoing.",
+		note: "Sunlight and stakes still work.",
+		image: "/art/species-dark.jpg"
+	},
+	{
+		id: "werewolves",
+		name: "Werewolves",
+		habitat: "Nordheim wilds, moon-law",
+		look: "Human until the hour isn’t. Furred in beast form.",
+		affinity: "Beast Magic, Moon",
+		figure: "Feralfell packs under Rengar’s sky",
+		kima: "The Fracture did not cancel the moon.",
+		history: "Pack-oriented. Reason vs rage. Kin to Beast Men.",
+		note: "Moon-law outranks System-law one night in twenty-eight.",
+		image: "/art/species-wild.jpg"
+	},
+	{
+		id: "soulbeasts",
+		name: "Soul Beasts",
+		habitat: "Star Meadows, sacred sites",
+		look: "Animals with a departed cyan light inside. Stags, wolves, birds.",
+		affinity: "Anima, Force",
+		figure: "Caelus meadow companions / Animara Bondforge",
+		kima: "Guardians, not pets.",
+		history: "Infused with departed essence. Calming, not tame.",
+		note: "Companions. Not mounts. Not loot.",
+		image: "/art/animals.jpg"
+	},
+	{
+		id: "spirits",
+		name: "Spirits",
+		habitat: "Crossroads, emotions, groves",
+		look: "Often invisible. A concept given pressure. Mist when seen.",
+		affinity: "Etharion’s paths",
+		figure: "Etharion’s whispered courts",
+		kima: "Influence without a body.",
+		history: "Xihuang and Abyssara bonds. False ‘unity’ possessions are Betrayer work.",
+		note: "A bond that does not have to bind.",
+		image: "/art/species-other.jpg"
+	},
+	{
+		id: "spiritcreatures",
+		name: "Spirit Creatures",
+		habitat: "Sacred sites",
+		look: "Physical body plus ethereal light. Animal + glow.",
+		affinity: "Anima",
+		figure: "Seraphon Calmweaver",
+		kima: "Calming aura. Elusive.",
+		history: "Born from spiritual energy, not death. Different from ghosts.",
+		note: "Hard to find on purpose.",
+		image: "/art/species-other.jpg"
+	},
+	{
+		id: "demonanimals",
+		name: "Demon Animals",
+		habitat: "Savannas, rifts",
+		look: "Twisted fauna, glow-wrong. Hellhounds, venomfangs.",
+		affinity: "Demonic, Fire",
+		figure: "Infernus Venomfang / Tezcal hunt-corruption",
+		kima: "Aggressive. Serve darker powers.",
+		history: "Corruption of the hunt, not a people.",
+		note: "Do not put them on the species council.",
+		image: "/art/bestiary-beasts.jpg"
+	},
+	{
+		id: "merfolk",
+		name: "Merfolk",
+		habitat: "Abyssara, Xihuang rivers",
+		look: "Tails, gills, scaled, song as law. Mei Lin is a river warden; Aquara is a seeress.",
+		affinity: "Water, Sound",
+		figure: "Aquara Depthcaller / Mei Lin",
+		kima: "Tidal Anima. Siren weather.",
+		history: "Underwater kingdoms. Flooded Dawn Age foes.",
+		note: "Depths are a nation, not a dungeon.",
+		image: "/art/aquara.jpg"
+	},
+	{
+		id: "dwarves",
+		name: "Dwarves",
+		habitat: "Nordheim, Highland forges",
+		look: "Dense, bearded or ringed, spark-scarred. ~4'6\". Durak is 200 lbs of that.",
+		affinity: "Metal, Fire, Earth",
+		figure: "Durak Ironvein / Eldric Stormforge",
+		kima: "Magic resistance as stubbornness.",
+		history: "Forge Wars vs Naga. Heartgrim’s amulet core.",
+		note: "Craft is loyalty. Density. Rings you can hold.",
+		image: "/art/durak.jpg"
+	},
+	{
+		id: "fae",
+		name: "Fae",
+		habitat: "Forest edges, oases",
+		look: "From pixie to dryad. Riddle-posture. Farah Noor runs oasis markets.",
+		affinity: "Nature, Moon, Illusion",
+		figure: "Farah Noor",
+		kima: "Bless and curse with the same courtesy.",
+		history: "Verdant Schism. Oasis Enclaves.",
+		note: "A mirage that feeds you is still a kind of true.",
+		image: "/art/species-other.jpg"
+	},
+	{
+		id: "centaurs",
+		name: "Centaurs",
+		habitat: "Endless Azure Fields",
+		look: "Equine lower body, human torso, 7'–8', maned, marked skin.",
+		affinity: "Wind, Earth, Kima",
+		figure: "Stormhoof guardians / Thalor’s other table",
+		kima: "Freedom as constitution. Archery, charges.",
+		history: "Elysara grasslands. Human–Centaur alliances.",
+		note: "They watch from the ridge. They come down for a table, not a prompt.",
+		image: "/art/species-wild.jpg"
+	},
+	{
+		id: "golems",
+		name: "Golems",
+		habitat: "Forges, ruins",
+		look: "Stone, metal, or clay given a job. Rune-core eyes.",
+		affinity: "Metal, Earth",
+		figure: "Ferrum Eternal / Adamantor Corebound",
+		kima: "Loyalty without will — until given will without oath.",
+		history: "Dwarf-made. Relic rebellion is a false rite.",
+		note: "A job is not a soul. Naming one is a responsibility.",
+		image: "/art/golem.jpg"
+	},
+	{
+		id: "harpies",
+		name: "Harpies",
+		habitat: "Cliffs, Silk Dunes",
+		look: "Winged women, clawed, feathered arms, sharp beaks.",
+		affinity: "Wind, Sound",
+		figure: "Khan Alim Rashid’s dune-kin / Skree Stormtalon",
+		kima: "Scavenger nations. Cry as disorient.",
+		history: "Abyssara nomad skies.",
+		note: "Scavenger is a state here, not a slur.",
+		image: "/art/species-wild.jpg"
+	},
+	{
+		id: "orcs",
+		name: "Orcs",
+		habitat: "Tezcal savannas, war holds",
+		look: "Tusks, green or grey, strength as courtesy. Grimgor is raid-built.",
+		affinity: "Kima, Fire",
+		figure: "Grimgor Bloodaxe",
+		kima: "Warlike is not simple.",
+		history: "Verdant Schism. Obsidian Tribes.",
+		note: "If the land is crystal, the blood still counts.",
+		image: "/art/grimgor.jpg"
+	},
+	{
+		id: "naga",
+		name: "Naga",
+		habitat: "Xihuang jungles, Abyssara depths, ruins",
+		look: "Human torso, serpentine coil, hypnotic calm. 8' coiled, 12' extended. Azure iridescent scales on the primary sheet.",
+		affinity: "Nature, Water, Psychokinesis",
+		figure: "Sssilvara Coil-Whisperer / Seeress Nylae",
+		kima: "Coil as architecture. Hypnosis costs trust if overused.",
+		history: "Forge Wars over mana veins. Martyrs and seers.",
+		note: "Coil is architecture, not spectacle.",
+		image: "/art/sssilvara.jpg"
+	},
+	{
+		id: "phoenixkin",
+		name: "Phoenixkin",
+		habitat: "Tezcal volcanoes",
+		look: "Fiery wings, ash-cycle, gem-fused skin on Rhaskor’s line. Rare.",
+		affinity: "Fire, Light",
+		figure: "Rhaskor Veldris / Ignis Reborn",
+		kima: "Renewal that can refuse to end.",
+		history: "Krystallis gem tribes. Living artifacts.",
+		note: "Cycles become cruelty if they never stop.",
+		image: "/art/rhaskor.jpg"
+	},
+	{
+		id: "shadowfolk",
+		name: "Shadowfolk",
+		habitat: "Voids, Nordheim enclaves, craters",
+		look: "Silhouette-people. Sun-avoidant, light-benders. Thorne is ashen and scarred; Nyxara is a void-queen.",
+		affinity: "Shadow, Stealth",
+		figure: "Nyxara Voidshade / Thorne Voidwarden",
+		kima: "Stealth as sovereignty.",
+		history: "Moonlit Feuds. Not the Betrayer’s species. A people who survived the dark.",
+		note: "A people who survived the dark.",
+		image: "/art/nyxara.jpg"
+	}
+];
+var SPECIES_GROUPS = [
+	{
+		title: "Civic and court peoples",
+		src: "/art/species-civic.jpg",
+		ids: [
+			"humans",
+			"elves",
+			"dwarves",
+			"naga",
+			"merfolk"
+		],
+		caption: "Human, elf, dwarf, naga, merfolk. City of Echoes night plaza."
+	},
+	{
+		title: "Wild and pack peoples",
+		src: "/art/species-wild.jpg",
+		ids: [
+			"beastmen",
+			"werewolves",
+			"centaurs",
+			"birdmen",
+			"harpies",
+			"orcs"
+		],
+		caption: "Beast Men, werewolves, centaurs, birdmen, harpies, orcs."
+	},
+	{
+		title: "Night and rift peoples",
+		src: "/art/species-dark.jpg",
+		ids: [
+			"demons",
+			"vampires",
+			"ghosts",
+			"ghouls",
+			"shadowfolk"
+		],
+		caption: "Demons, vampires, ghosts, ghouls, Shadowfolk."
+	},
+	{
+		title: "Rare, constructed, and other",
+		src: "/art/species-other.jpg",
+		ids: [
+			"aliens",
+			"elementals",
+			"golems",
+			"phoenixkin",
+			"fae",
+			"soulbeasts",
+			"spirits",
+			"spiritcreatures",
+			"demonanimals"
+		],
+		caption: "Aliens, elementals, golems, phoenixkin, fae, soul-beasts, spirits."
+	}
+];
+//#endregion
+export { SPECIES_GROUPS as n, SPECIES as t };

@@ -1,0 +1,806 @@
+import { b as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { o as Route$8 } from "./router-D2-N1iZH.mjs";
+import { a as Shell, i as PageTitle, n as Figure } from "./ui-BdcoiLV4.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/bestiary-DC0-Ixvp.js
+var import_jsx_runtime = require_jsx_runtime();
+var BESTIARY_PLATES = [
+	{
+		id: "construct",
+		src: "/art/bestiary-construct.jpg",
+		title: "Constructs",
+		caption: "Wind Serpent Construct, Earth Golem, Time Automaton Dragonkin. Built, not born."
+	},
+	{
+		id: "beasts",
+		src: "/art/bestiary-beasts.jpg",
+		title: "Hunt beasts",
+		caption: "Fire Hydra, Ice Yeti, Gravity Centaur, Demonic Hellhound. Tezcal and Nordheim."
+	},
+	{
+		id: "undead",
+		src: "/art/bestiary-undead.jpg",
+		title: "Undead and spirits",
+		caption: "Summoning Zombie Beast, Necromancy Wraith, Dark Arts Banshee, Moon Troll."
+	},
+	{
+		id: "sky",
+		src: "/art/bestiary-sky.jpg",
+		title: "Sky and sea",
+		caption: "Water Kraken, Lightning Thunderbird, Psychokinesis Wyvern, Lightning Griffon."
+	},
+	{
+		id: "mythic",
+		src: "/art/bestiary-mythic.jpg",
+		title: "Mythic",
+		caption: "Fire Dragon, Demonic Balrog, Nature Dryad, Light Seraph."
+	},
+	{
+		id: "animals",
+		src: "/art/animals.jpg",
+		title: "Animals and elemental wildlife",
+		caption: "The remaining ~1,000 entries are procedural: base animal × one of 21 elements × a type block. Frost-bear, shadow panther, fire boar, lightning wyvern, soul-beast stag."
+	}
+];
+var img = {
+	construct: "/art/bestiary-construct.jpg",
+	beasts: "/art/bestiary-beasts.jpg",
+	undead: "/art/bestiary-undead.jpg",
+	sky: "/art/bestiary-sky.jpg",
+	mythic: "/art/bestiary-mythic.jpg",
+	animals: "/art/animals.jpg",
+	golem: "/art/golem.jpg",
+	serpent: "/art/bestiary-construct.jpg"
+};
+var CREATURES = [
+	{
+		n: 1,
+		id: "zombie-beast",
+		name: "Summoning Zombie Beast",
+		type: "Undead beast",
+		element: "Summoning / Necromancy",
+		habitat: "Rifts, graves, Vindraeth camps",
+		look: "Shambling wolf-corpse, 5' at the shoulder, 300 lbs bloated, pallid grey, spectral cyan chains, dull-white eyes that go green when it summons.",
+		habit: "Pack lurcher. Spreads rot. Weak in light. Summons lesser zombies.",
+		levels: "1–40",
+		image: img.undead
+	},
+	{
+		n: 2,
+		id: "gravity-centaur",
+		name: "Gravity Centaur Beast",
+		type: "Beast",
+		element: "Gravity",
+		habitat: "Xihuang jungles, Tezcal crystal savanna",
+		look: "7' to the withers, 1,200 lbs, tawny fur with distortion ripples, violet pull-eyes, hooves that warp space.",
+		habit: "Herd charger. Strength scales with kills. Overusing the field slows itself.",
+		levels: "15–80",
+		image: img.beasts
+	},
+	{
+		n: 3,
+		id: "demon-lord-aquatic",
+		name: "Beast Magic Demon Lord (Aquatic)",
+		type: "Demon / aquatic",
+		element: "Beast Magic / Demonic",
+		habitat: "Abyssara depths, waterlogged rifts",
+		look: "8' demonic kappa, dark-blue corrupted veins, tentacle hair, feral red eyes, 500 lbs.",
+		habit: "Lurker. Summons feral allies. Corrupts water. Weak on dry land.",
+		levels: "40–120",
+		image: img.sky
+	},
+	{
+		n: 4,
+		id: "shadow-minotaur",
+		name: "Shadow Minotaur Demon",
+		type: "Demon",
+		element: "Shadow",
+		habitat: "Labyrinth ruins, Xihuang, Vindraeth",
+		look: "8' hulking minotaur, 400 lbs, shadow-grey, horned mane, fades into dark.",
+		habit: "Stealth ambush. Dies in open light. Mythic variants add moon-illusions.",
+		levels: "20–90",
+		image: img.undead
+	},
+	{
+		n: 5,
+		id: "wind-plague",
+		name: "Wind Plague Carrier Elemental",
+		type: "Elemental",
+		element: "Wind",
+		habitat: "Storms, Elysara floating isles",
+		look: "Variable ~6', airy, cloudy wisps, white gust-eyes, plague-dust aura.",
+		habit: "AOE gusts that spread disease. Disperses in calm. Anchors kill it.",
+		levels: "10–70",
+		image: img.sky
+	},
+	{
+		n: 6,
+		id: "metal-phoenix-plant",
+		name: "Metal Phoenix Plant",
+		type: "Plant / construct",
+		element: "Metal / Fire",
+		habitat: "Infused soil, Nordheim, Tezcal",
+		look: "10' flora, steel-sap vines, metal-green leaves, 200 lbs.",
+		habit: "Regrows after defeat. Armors itself. Combusts on death in mythic form.",
+		levels: "15–80",
+		image: img.mythic
+	},
+	{
+		n: 7,
+		id: "wind-serpent",
+		name: "Wind Serpent Construct",
+		type: "Construct",
+		element: "Wind / Lightning (mythic)",
+		habitat: "Elysara ruins, dungeon regulators",
+		look: "15' bronze automaton serpent, 400 lbs, cyan wind glyphs on coiled segments, blue glow-eyes.",
+		habit: "First story-mode fight. A System regulator, not a villain. Fast strikes. Weak to magic.",
+		levels: "5–60",
+		image: img.construct
+	},
+	{
+		n: 8,
+		id: "moon-troll",
+		name: "Moon Troll Demon",
+		type: "Demon",
+		element: "Moon / Shadow",
+		habitat: "Moonlit ruins, Abyssara, Vindraeth",
+		look: "9', 350 lbs, green-demon skin, coarse grey hair, moon-silver eyes, illusion clones.",
+		habit: "Regenerates under the moon. Weak in daylight. Clones in alpha rank.",
+		levels: "20–90",
+		image: img.undead
+	},
+	{
+		n: 9,
+		id: "psy-wyvern",
+		name: "Psychokinesis Wyvern (Aquatic)",
+		type: "Dragonkin / aquatic",
+		element: "Psychokinesis / Force",
+		habitat: "Abyssara, Caelus rifts",
+		look: "12' winged aquatic wyvern, 600 lbs, blue distorted scales, purple psyche gems.",
+		habit: "Mind-confuse auras and blasts. Weak out of water. Physical hits land; minds do not.",
+		levels: "30–120",
+		image: img.sky
+	},
+	{
+		n: 10,
+		id: "time-automaton",
+		name: "Time Automaton Dragonkin",
+		type: "Construct / dragonkin",
+		element: "Time",
+		habitat: "Nordheim temporal forges, Caelus ruins",
+		look: "15' mechanical dragon, 800 lbs, alloy bronze, time-gold looping eyes, gear ticks.",
+		habit: "Rewinds attacks. Phases. Weak in stable time and to magic.",
+		levels: "50–140",
+		image: img.construct
+	},
+	{
+		n: 11,
+		id: "fire-hydra",
+		name: "Fire Hydra Beast",
+		type: "Beast",
+		element: "Fire / Demonic (mythic)",
+		habitat: "Tezcal badlands, Embercrag",
+		look: "10', 500 lbs, multi-headed, red fiery skin, orange eyes, heads regenerate unless cauterized.",
+		habit: "Multi-strike. More heads as it ranks. Weak to water and cauterize.",
+		levels: "25–110",
+		image: img.beasts
+	},
+	{
+		n: 12,
+		id: "ice-yeti",
+		name: "Ice Yeti Giant",
+		type: "Giant",
+		element: "Ice / Nature (mythic)",
+		habitat: "Nordheim tundras, Elysara peaks",
+		look: "12', 800 lbs, shaggy white fur, ice-blue eyes, blizzard slams.",
+		habit: "AOE slow. Thick fur. Weak to heat. Slow mover.",
+		levels: "20–100",
+		image: img.beasts
+	},
+	{
+		n: 13,
+		id: "light-seraph",
+		name: "Light Seraph Ethereal",
+		type: "Ethereal",
+		element: "Light / Force",
+		habitat: "Elysara spires, Caelus events",
+		look: "8', weightless, glowing light-skin, gold-graphic feathers, white radiant eyes.",
+		habit: "Healing auras and shields. Purifies. Weak to dark.",
+		levels: "40–130",
+		image: img.mythic
+	},
+	{
+		n: 14,
+		id: "necro-wraith",
+		name: "Necromancy Wraith Undead",
+		type: "Undead",
+		element: "Necromancy / Shadow",
+		habitat: "Necropoles, Vindraeth wastes",
+		look: "7' phasing, weightless, ghostly pale, misty black hair, necro-green drain-eyes.",
+		habit: "Soul-drain. Intangible strikes. Weak to light and solid hits when forced corporeal.",
+		levels: "20–90",
+		image: img.undead
+	},
+	{
+		n: 15,
+		id: "dark-banshee",
+		name: "Dark Arts Banshee Spirit",
+		type: "Spirit",
+		element: "Dark Arts / Sound",
+		habitat: "Groves, forests, unfinished places",
+		look: "6' ethereal, pale curse-skin, flowing white hair, black wailing eyes.",
+		habit: "Fear scream, disorient. Drains itself when manifested. Weak to peace-wards.",
+		levels: "15–80",
+		image: img.undead
+	},
+	{
+		n: 16,
+		id: "earth-golem",
+		name: "Earth Golem Construct",
+		type: "Construct",
+		element: "Earth / Metal",
+		habitat: "Nordheim forges, dwarf ruins",
+		look: "Heavy stone-metal body, ~1,000 lbs, stone-brown glow-eyes, rune core. Related to species Golems.",
+		habit: "Tank. Plating reinforces with rank. Loyalty until given will without oath.",
+		levels: "10–90",
+		image: img.construct
+	},
+	{
+		n: 17,
+		id: "water-kraken",
+		name: "Water Kraken Aquatic",
+		type: "Aquatic",
+		element: "Water",
+		habitat: "Abyssara Deeptrench",
+		look: "Graphic tentacle mass, cyan bioluminescence, city-scale in mythic rank.",
+		habit: "Grappler. Tidal prisons. Isolation of ships. Weak if beached.",
+		levels: "40–160",
+		image: img.sky
+	},
+	{
+		n: 18,
+		id: "thunderbird",
+		name: "Lightning Thunderbird Avian",
+		type: "Avian",
+		element: "Lightning",
+		habitat: "Elysara Cloudreach, Stormrift",
+		look: "Storm-eagle, electric-cyan wings, boom as a body.",
+		habit: "Dive-strike, chain lightning. Nest on floating isles.",
+		levels: "25–110",
+		image: img.sky
+	},
+	{
+		n: 19,
+		id: "nature-dryad",
+		name: "Nature Dryad Plant",
+		type: "Plant / fey",
+		element: "Nature",
+		habitat: "Elf groves, Xihuang, last green of Vindraeth",
+		look: "Tree-integrated humanoid, bark skin, leaf hair, vine limbs. Species Dryads overlap here.",
+		habit: "Vine traps. Nurture that can imprison. Hates deforestation.",
+		levels: "15–80",
+		image: img.mythic
+	},
+	{
+		n: 20,
+		id: "hellhound",
+		name: "Demonic Hellhound Beast",
+		type: "Beast / demon",
+		element: "Demonic / Fire",
+		habitat: "Tezcal savannas, rifts",
+		look: "Fire-jawed hound, magenta in the mouth, ashen hide.",
+		habit: "Pack hunter. Serve darker powers. Do not put them on a species council.",
+		levels: "10–70",
+		image: img.beasts
+	},
+	{
+		n: 21,
+		id: "sound-siren",
+		name: "Sound Siren Aquatic",
+		type: "Aquatic / fey",
+		element: "Sound / Water",
+		habitat: "Abyssara coasts",
+		look: "Scaled singer, graphic sound-rings from the mouth. Cousin to merfolk/siren species.",
+		habit: "Lure, debuff, drown. Fair markets exist; this entry is the hostile one.",
+		levels: "15–80",
+		image: img.sky
+	},
+	{
+		n: 22,
+		id: "force-titan",
+		name: "Force Titan Giant",
+		type: "Giant",
+		element: "Force",
+		habitat: "High peaks, Caelus plateaus",
+		look: "15'+ colossus, push-aura, stone-and-qi body.",
+		habit: "Telekinetic slams. Slow. Story-tellers in Giant culture; this is the combat form.",
+		levels: "50–150",
+		image: img.beasts
+	},
+	{
+		n: 23,
+		id: "shadow-ninja",
+		name: "Shadow Ninja Humanoid",
+		type: "Humanoid",
+		element: "Shadow",
+		habitat: "Nordheim enclaves, night cities",
+		look: "Silhouette operative, light-bender, not automatically Shadowfolk.",
+		habit: "Ambush, vanish. A job more than a people.",
+		levels: "10–70",
+		image: img.undead
+	},
+	{
+		n: 24,
+		id: "fire-salamander",
+		name: "Fire Salamander Reptilian",
+		type: "Reptile",
+		element: "Fire",
+		habitat: "Tezcal volcanoes",
+		look: "Lava-backed salamander, heat-haze hide.",
+		habit: "Burrow in magma. Weak to ice and water.",
+		levels: "5–50",
+		image: img.beasts
+	},
+	{
+		n: 25,
+		id: "moon-kitsune",
+		name: "Moon Kitsune Fey",
+		type: "Fey",
+		element: "Moon",
+		habitat: "Xihuang groves, Abyssara oases",
+		look: "Multi-tail fox, silver fire, illusion clones.",
+		habit: "Trick, bargain, moon-dodge. Related to Fae.",
+		levels: "20–90",
+		image: img.mythic
+	},
+	{
+		n: 26,
+		id: "earth-rhino",
+		name: "Earth Rhino Beast",
+		type: "Beast",
+		element: "Earth",
+		habitat: "Tezcal savanna, Nordheim foothills",
+		look: "Armored rhino, stone plates, quake charge.",
+		habit: "Stampede. Tank. Simple, heavy.",
+		levels: "10–60",
+		image: img.animals
+	},
+	{
+		n: 27,
+		id: "water-leviathan",
+		name: "Water Leviathan Aquatic",
+		type: "Aquatic",
+		element: "Water",
+		habitat: "Open Abyssara, storm seas",
+		look: "Longer, leaner cousin of the kraken. Tidal body.",
+		habit: "Swallows ships. Territorial. Not a people.",
+		levels: "50–160",
+		image: img.sky
+	},
+	{
+		n: 28,
+		id: "lightning-griffon",
+		name: "Lightning Griffon Avian",
+		type: "Avian",
+		element: "Lightning",
+		habitat: "Elysara cliffs, Caelus",
+		look: "Eagle-lion, electric-cyan wings, dive posture.",
+		habit: "Mount candidate for Birdmen and Seekers. Screech stuns.",
+		levels: "15–80",
+		image: img.sky
+	},
+	{
+		n: 29,
+		id: "nature-treant",
+		name: "Nature Treant Plant",
+		type: "Plant",
+		element: "Nature",
+		habitat: "Ancient forests",
+		look: "Walking tree, larger than a dryad, root-feet.",
+		habit: "Grove guardian. Slow. Almost impossible to sneak past in its wood.",
+		levels: "20–100",
+		image: img.mythic
+	},
+	{
+		n: 30,
+		id: "demonic-imp",
+		name: "Demonic Imp",
+		type: "Demon",
+		element: "Demonic",
+		habitat: "Rifts, Tezcal cults",
+		look: "Small, winged, pact-mouth. Not Xal’thok.",
+		habit: "Familiar, spy, nuisance. A demon species juvenile, not a Betrayer.",
+		levels: "1–30",
+		image: img.beasts
+	},
+	{
+		n: 31,
+		id: "sound-harpy",
+		name: "Sound Harpy Avian",
+		type: "Avian",
+		element: "Sound",
+		habitat: "Cliffs, Silk Dunes — overlaps Harpy species",
+		look: "Winged woman, talons, shrill cry as a visible graphic ring.",
+		habit: "Raid, nest-hoard, disorient. The species entry is the people; this is the hostile wild form.",
+		levels: "10–60",
+		image: img.sky
+	},
+	{
+		n: 32,
+		id: "force-cyclops",
+		name: "Force Cyclops Giant",
+		type: "Giant",
+		element: "Force",
+		habitat: "Peaks, ruins",
+		look: "One-eye giant, telekinetic stare.",
+		habit: "Throws landscape. Poor depth once the eye is marked.",
+		levels: "30–110",
+		image: img.beasts
+	},
+	{
+		n: 33,
+		id: "shadow-assassin",
+		name: "Shadow Assassin Humanoid",
+		type: "Humanoid",
+		element: "Shadow",
+		habitat: "Cities, voids",
+		look: "Cloaked killer, not a species. A class of encounter.",
+		habit: "Contract hunter. System-licensed in some cities. Not in others.",
+		levels: "20–90",
+		image: img.undead
+	},
+	{
+		n: 34,
+		id: "fire-dragon",
+		name: "Fire Dragon Dragonkin",
+		type: "Dragonkin",
+		element: "Fire",
+		habitat: "Tezcal volcanoes, ancient spires",
+		look: "Hard-edged flame plates, graphic wings, furnace chest.",
+		habit: "Apex. Related to Drakonids as a people; this is the wild lord.",
+		levels: "80–200",
+		image: img.mythic
+	},
+	{
+		n: 35,
+		id: "moon-sprite",
+		name: "Moon Sprite Fey",
+		type: "Fey",
+		element: "Moon",
+		habitat: "Oases, groves",
+		look: "Small lunar light with a body. Easy to mistake for a will-o’-wisp.",
+		habit: "Guide or mislead. Farah’s markets use tame ones.",
+		levels: "1–25",
+		image: img.mythic
+	},
+	{
+		n: 36,
+		id: "earth-mammoth",
+		name: "Earth Mammoth Beast",
+		type: "Beast",
+		element: "Earth",
+		habitat: "Nordheim, high plains",
+		look: "Stone-tusked mammoth, quake step.",
+		habit: "Herd tank. Pack-animal for dwarves when bargained, not tamed.",
+		levels: "15–80",
+		image: img.animals
+	},
+	{
+		n: 37,
+		id: "water-merfolk-hostile",
+		name: "Water Merfolk (hostile wild)",
+		type: "Aquatic",
+		element: "Water",
+		habitat: "Coasts — distinct from the Merfolk people",
+		look: "Scaled hunter form. The people live in Depthcall; this entry is feral coastal packs.",
+		habit: "If you cannot tell a citizen from a wild pack, you will start a war.",
+		levels: "5–50",
+		image: img.sky
+	},
+	{
+		n: 38,
+		id: "lightning-eagle",
+		name: "Lightning Eagle Avian",
+		type: "Avian",
+		element: "Lightning",
+		habitat: "Cloudreach",
+		look: "Smaller thunderbird. Scout-eagle of Birdmen.",
+		habit: "Message bird, storm scout, sometimes a fight.",
+		levels: "5–40",
+		image: img.sky
+	},
+	{
+		n: 39,
+		id: "nature-ent",
+		name: "Nature Ent Plant",
+		type: "Plant",
+		element: "Nature",
+		habitat: "Deep forest",
+		look: "Older, slower treant. Almost geography.",
+		habit: "Does not chase. The forest moves instead.",
+		levels: "40–130",
+		image: img.mythic
+	},
+	{
+		n: 40,
+		id: "demonic-fiend",
+		name: "Demonic Fiend",
+		type: "Demon",
+		element: "Demonic",
+		habitat: "Rifts",
+		look: "Mid-rank demon soldier. Ashen, horned, not a named Betrayer.",
+		habit: "Horde filler. Species Demons are people; this is the wild rank.",
+		levels: "20–80",
+		image: img.beasts
+	},
+	{
+		n: 41,
+		id: "sound-banshee-2",
+		name: "Sound Banshee Spirit",
+		type: "Spirit",
+		element: "Sound",
+		habitat: "Wastes, unfinished halls",
+		look: "Sister-entry to #15. Sound-primary, less curse, more volume.",
+		habit: "Sonic wail. Can shatter cheap runes.",
+		levels: "15–80",
+		image: img.undead
+	},
+	{
+		n: 42,
+		id: "force-goliath",
+		name: "Force Goliath Giant",
+		type: "Giant",
+		element: "Force",
+		habitat: "Peaks",
+		look: "Smaller titan. 15' class. Push-aura.",
+		habit: "Duel giant. Honor-fight in Giant culture if you speak first.",
+		levels: "40–120",
+		image: img.beasts
+	},
+	{
+		n: 43,
+		id: "shadow-rogue",
+		name: "Shadow Rogue Humanoid",
+		type: "Humanoid",
+		element: "Shadow",
+		habitat: "Cities",
+		look: "Thief-class encounter. Not Shadowfolk unless the sheet says so.",
+		habit: "Steal, flee, sell to illusion markets.",
+		levels: "5–50",
+		image: img.undead
+	},
+	{
+		n: 44,
+		id: "fire-basilisk",
+		name: "Fire Basilisk Reptilian",
+		type: "Reptile",
+		element: "Fire",
+		habitat: "Tezcal, desert ruins",
+		look: "Heat-gaze lizard. Stone-and-cinder victims.",
+		habit: "Look-kill. Mirrors and smoke are the documented counter.",
+		levels: "25–90",
+		image: img.beasts
+	},
+	{
+		n: 45,
+		id: "moon-pixie",
+		name: "Moon Pixie Fey",
+		type: "Fey",
+		element: "Moon",
+		habitat: "Forest edges",
+		look: "Tiny, lunar, prank-posture. Fae-touched cousin.",
+		habit: "Riddle, theft, blessing with the same courtesy.",
+		levels: "1–20",
+		image: img.mythic
+	},
+	{
+		n: 46,
+		id: "earth-boar",
+		name: "Earth Boar Beast",
+		type: "Beast",
+		element: "Earth / Fire variant exists",
+		habitat: "Wilds, Nordheim, Tezcal",
+		look: "Bristled charger, stone or lava tusks depending on variant.",
+		habit: "Common hunt. Packs wreck under-armored Seekers.",
+		levels: "1–40",
+		image: img.animals
+	},
+	{
+		n: 47,
+		id: "water-triton",
+		name: "Water Triton Aquatic",
+		type: "Aquatic",
+		element: "Water",
+		habitat: "Mid-depth courts",
+		look: "Armed mer-hunter. Spear, shell-shield. Not automatically Merfolk citizen.",
+		habit: "Patrol. Will escort or sink you based on flags.",
+		levels: "10–60",
+		image: img.sky
+	},
+	{
+		n: 48,
+		id: "lightning-roc",
+		name: "Lightning Roc Avian",
+		type: "Avian",
+		element: "Lightning / Gravity",
+		habitat: "Stormrift, Caelus",
+		look: "Ship-lifting storm-bird. Larger than thunderbird.",
+		habit: "Apex avian. Nest is a dungeon.",
+		levels: "60–160",
+		image: img.sky
+	},
+	{
+		n: 49,
+		id: "nature-grovekin",
+		name: "Nature Grovekin Plant",
+		type: "Plant",
+		element: "Nature",
+		habitat: "Sacred groves",
+		look: "Smaller dryad-kin, more animal than tree.",
+		habit: "Calming aura. Elusive. Related to Spirit Creatures.",
+		levels: "5–40",
+		image: img.mythic
+	},
+	{
+		n: 50,
+		id: "demonic-balrog",
+		name: "Demonic Balrog",
+		type: "Demon",
+		element: "Demonic / Fire",
+		habitat: "Deep rifts, Tezcal chasms",
+		look: "Obsidian and magenta fire, whip-and-sword posture, furnace height.",
+		habit: "Named-class threat. Not a person. Not Xal’thok. A war-form.",
+		levels: "80–200",
+		image: img.mythic
+	}
+];
+var PROCEDURAL = {
+	title: "The other thousand",
+	body: "The character bible lists 50 full sheets, then ~1,000 more as a generator: 20 types × 21 elements × 50+ base animal and monster forms. Examples already named in the docs include frost-bears (Ice), shadow panthers, fire boars, lightning wyverns, necromancy oxen, phase spiders (Time), sonic lions, and earth warhorses. They are wildlife and dungeon stock, not nations. Soul Beasts are the exception: animals with a departed light inside, companions, not loot."
+};
+function BestiaryPage() {
+	const { id } = Route$8.useSearch();
+	const cr = CREATURES.find((c) => c.id === id);
+	if (cr) return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Shell, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+		href: "/bestiary",
+		className: "text-xs uppercase tracking-nav text-anima no-underline",
+		children: "All creatures"
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Figure, {
+			src: cr.image,
+			alt: cr.name,
+			caption: cr.look
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				className: "text-xs uppercase tracking-nav text-kima",
+				children: [
+					"#",
+					cr.n,
+					" · ",
+					cr.type,
+					" · ",
+					cr.element
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+				className: "mt-2 font-display text-3xl",
+				children: cr.name
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-2 text-sm uppercase tracking-nav text-chrome",
+				children: cr.habitat
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-5 text-paper",
+				children: cr.habit
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				className: "mt-4 text-sm text-mute",
+				children: [
+					"Typical levels ",
+					cr.levels,
+					"."
+				]
+			})
+		] })]
+	})] });
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Shell, { children: [
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageTitle, {
+			kicker: "Bestiary",
+			title: "Fifty named creatures, plus the animals",
+			lead: "The character bible gives full sheets for creatures 1–50. The rest (~1,000) are generated: base animal or monster × one of 21 elements × a type block. These plates show the named fifty in groups, and the wildlife line (frost-bear, shadow panther, fire boar, lightning wyvern, soul-beast stag)."
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "grid gap-6 md:grid-cols-2",
+			children: BESTIARY_PLATES.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Figure, {
+				src: p.src,
+				alt: p.title,
+				caption: `${p.title}. ${p.caption}`
+			}, p.id))
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			className: "mt-14 rounded-lg border border-line bg-ink p-5",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+				className: "font-display text-xl",
+				children: PROCEDURAL.title
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-3 text-sm text-mute",
+				children: PROCEDURAL.body
+			})]
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+			className: "mt-14",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "font-display text-2xl",
+					children: "The fifty"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-2 text-sm text-mute",
+					children: "Open any row for the sheet. Types mix beast, construct, undead, avian, aquatic, plant, fey, giant, dragonkin, demon, humanoid. Elements follow the 21-branch list on Systems."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-6 overflow-x-auto",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+						className: "w-full min-w-[40rem] border-collapse text-left text-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+							className: "border-b border-line text-xs uppercase tracking-nav text-mute",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "py-2 pr-3",
+									children: "#"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "py-2 pr-3",
+									children: "Name"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "py-2 pr-3",
+									children: "Type"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "py-2 pr-3",
+									children: "Element"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
+									className: "py-2",
+									children: "Habitat"
+								})
+							]
+						}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", { children: CREATURES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("tr", {
+							className: "border-b border-line/60",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+									className: "py-3 pr-3 text-mute",
+									children: c.n
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+									className: "py-3 pr-3",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: `/bestiary?id=${c.id}`,
+										className: "text-paper no-underline hover:text-anima",
+										children: c.name
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+									className: "py-3 pr-3 text-mute",
+									children: c.type
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+									className: "py-3 pr-3 text-anima",
+									children: c.element
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+									className: "py-3 text-chrome",
+									children: c.habitat
+								})
+							]
+						}, c.id)) })]
+					})
+				})
+			]
+		})
+	] });
+}
+//#endregion
+export { BestiaryPage as component };

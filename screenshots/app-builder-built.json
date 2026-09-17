@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Echoes of Aetherion",
+      "hasCanvas": false,
+      "bodyTextLen": 3311,
+      "bodyTextHash": "cfce6d676d445263d681f7ce8b3a59c20e073b38feeab19bc33c29fc8db1b908",
+      "bodyTextPrefix": "Echoes of Aetherion CIRCUIT INK IDENTITY STORY PEOPLE GODS SPECI",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Echoes of Aetherion",
+      "hasCanvas": false,
+      "bodyTextLen": 3299,
+      "bodyTextHash": "f17b7be8c5e829ce0a4704be02c03aef048de968a9a9f9033315363753dcba76",
+      "bodyTextPrefix": "Echoes of Aetherion IDENTITY STORY PEOPLE GODS SPECIES BESTIARY ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
