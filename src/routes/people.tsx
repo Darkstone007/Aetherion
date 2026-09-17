@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/site/shell";
-import { CardLink, Figure, PageTitle, ThreadChips } from "@/components/site/ui";
+import { BackLink, CardLink, Figure, PageTitle, ThreadChips } from "@/components/site/ui";
 import { THREADS } from "@/data/continuity";
 import { PEOPLE } from "@/data/people";
 
@@ -21,9 +21,7 @@ function PeoplePage() {
     const s = person.sheet;
     return (
       <Shell>
-        <a href="/people" className="text-xs uppercase tracking-nav text-anima no-underline">
-          All people
-        </a>
+        <BackLink to="/people">All people</BackLink>
         <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,280px)_1fr]">
           {person.image ? (
             <Figure src={person.image} alt={person.name} tall caption={person.look} />

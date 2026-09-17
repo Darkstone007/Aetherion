@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/site/shell";
-import { Figure, PageTitle } from "@/components/site/ui";
+import { BackLink, Figure, PageTitle } from "@/components/site/ui";
 import { BESTIARY_PLATES, CREATURES, PROCEDURAL } from "@/data/bestiary";
+import { withBase } from "@/lib/base";
 
 type Search = { id?: string };
 
@@ -19,9 +20,7 @@ function BestiaryPage() {
   if (cr) {
     return (
       <Shell>
-        <a href="/bestiary" className="text-xs uppercase tracking-nav text-anima no-underline">
-          All creatures
-        </a>
+        <BackLink to="/bestiary">All creatures</BackLink>
         <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <Figure src={cr.image} alt={cr.name} caption={cr.look} />
           <div>
@@ -79,7 +78,7 @@ function BestiaryPage() {
                 <tr key={c.id} className="border-b border-line/60">
                   <td className="py-3 pr-3 text-mute">{c.n}</td>
                   <td className="py-3 pr-3">
-                    <a href={`/bestiary?id=${c.id}`} className="text-paper no-underline hover:text-anima">
+                    <a href={withBase(`/bestiary?id=${c.id}`)} className="text-paper no-underline hover:text-anima">
                       {c.name}
                     </a>
                   </td>

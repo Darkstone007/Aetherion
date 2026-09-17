@@ -61,11 +61,18 @@ export type Species = {
   image?: string;
 };
 
+export type ContinentView = {
+  src: string;
+  place: string;
+  caption: string;
+};
+
 export type Continent = {
   id: string;
   name: string;
   theme: string;
   image: string;
+  views: ContinentView[];
   light: string;
   terrain: string;
   culture: string;
@@ -87,6 +94,7 @@ export type Material = {
   source: string;
   use: string;
   look: string;
+  image?: string;
 };
 
 export type RuneKind = {

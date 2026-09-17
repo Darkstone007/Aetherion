@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/site/shell";
-import { CardLink, Figure, PageTitle, ThreadChips } from "@/components/site/ui";
+import { BackLink, CardLink, Figure, PageTitle, ThreadChips } from "@/components/site/ui";
 import { THREADS } from "@/data/continuity";
 import { GODS, TENEBRIS_NOTE } from "@/data/gods";
 
@@ -20,9 +20,7 @@ function GodsPage() {
   if (id === "tenebris") {
     return (
       <Shell>
-        <a href="/gods" className="text-xs uppercase tracking-nav text-anima no-underline">
-          All gods
-        </a>
+        <BackLink to="/gods">All gods</BackLink>
         <h1 className="mt-6 font-display text-3xl">Tenebris</h1>
         <p className="mt-4 max-w-2xl text-mute">{TENEBRIS_NOTE}</p>
         <ThreadChips links={THREADS.tenebris} />
@@ -33,9 +31,7 @@ function GodsPage() {
   if (god) {
     return (
       <Shell>
-        <a href="/gods" className="text-xs uppercase tracking-nav text-anima no-underline">
-          All gods
-        </a>
+        <BackLink to="/gods">All gods</BackLink>
         <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,280px)_1fr]">
           {god.image ? (
             <Figure src={god.image} alt={god.name} tall caption={god.look} />

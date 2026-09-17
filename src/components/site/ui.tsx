@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Thread } from "@/data/types";
+import { withBase } from "@/lib/base";
 import { threadHref } from "@/lib/nav";
 
 export function Kicker({ children }: { children: React.ReactNode }) {
@@ -23,6 +24,14 @@ export function PageTitle({
       <h1 className="font-display text-3xl text-paper">{title}</h1>
       <p className="mt-4 text-base text-mute">{lead}</p>
     </header>
+  );
+}
+
+export function BackLink({ to, children }: { to: string; children: React.ReactNode }) {
+  return (
+    <a href={withBase(to)} className="text-xs uppercase tracking-nav text-anima no-underline">
+      {children}
+    </a>
   );
 }
 
@@ -56,6 +65,7 @@ export function Figure({
   tall?: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const resolved = withBase(src);
   return (
     <>
       <figure className="overflow-hidden rounded-lg bg-raised">
@@ -66,7 +76,7 @@ export function Figure({
           aria-label={`Open ${alt}`}
         >
           <img
-            src={src}
+            src={resolved}
             alt={alt}
             className={`w-full object-cover ${tall ? "aspect-[2/3]" : "aspect-video"}`}
           />
@@ -81,7 +91,7 @@ export function Figure({
           aria-label={alt}
           onClick={() => setOpen(false)}
         >
-          <img src={src} alt={alt} className="max-h-[90dvh] max-w-full object-contain" />
+          <img src={resolved} alt={alt} className="max-h-[90dvh] max-w-full object-contain" />
         </div>
       ) : null}
     </>
@@ -112,11 +122,11 @@ export function CardLink({
 }) {
   return (
     <a
-      href={to}
+      href={withBase(to)}
       className="group overflow-hidden rounded-lg border border-line bg-ink no-underline transition-colors duration-150 hover:border-line-strong"
     >
       {image ? (
-        <img src={image} alt="" className="aspect-[2/3] w-full object-cover" />
+        <img src={withBase(image)} alt="" className="aspect-[2/3] w-full object-cover" />
       ) : (
         <Mark name={name} />
       )}
@@ -142,10 +152,10 @@ export function WideCard({
 }) {
   return (
     <a
-      href={to}
+      href={withBase(to)}
       className="group overflow-hidden rounded-lg border border-line bg-ink no-underline transition-colors duration-150 hover:border-line-strong"
     >
-      <img src={image} alt="" className="aspect-video w-full object-cover" />
+      <img src={withBase(image)} alt="" className="aspect-video w-full object-cover" />
       <div className="p-4">
         <p className="font-display text-xl text-paper group-hover:text-anima">{name}</p>
         <p className="mt-2 text-sm text-mute">{theme}</p>

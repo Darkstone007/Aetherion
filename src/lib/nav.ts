@@ -1,4 +1,5 @@
 import type { CodexTab } from "@/data/types";
+import { withBase } from "./base";
 
 export const NAV = [
   { to: "/", label: "Identity" },
@@ -24,7 +25,7 @@ export function threadHref(tab: CodexTab, id: string) {
     Bestiary: "/bestiary",
     Craft: "/craft",
   };
-  if (tab === "System" || tab === "History") return map[tab];
-  if (tab === "Craft") return id ? `${map[tab]}?id=${encodeURIComponent(id)}` : map[tab];
-  return `${map[tab]}?id=${encodeURIComponent(id)}`;
+  if (tab === "System" || tab === "History") return withBase(map[tab]);
+  if (tab === "Craft") return withBase(id ? `${map[tab]}?id=${encodeURIComponent(id)}` : map[tab]);
+  return withBase(`${map[tab]}?id=${encodeURIComponent(id)}`);
 }

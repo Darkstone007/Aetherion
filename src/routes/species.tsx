@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/site/shell";
-import { Figure, PageTitle, ThreadChips } from "@/components/site/ui";
+import { BackLink, Figure, PageTitle, ThreadChips } from "@/components/site/ui";
 import { THREADS } from "@/data/continuity";
 import { SPECIES, SPECIES_GROUPS } from "@/data/species";
+import { withBase } from "@/lib/base";
 
 type Search = { id?: string };
 
@@ -20,9 +21,7 @@ function SpeciesPage() {
   if (sp) {
     return (
       <Shell>
-        <a href="/species" className="text-xs uppercase tracking-nav text-anima no-underline">
-          All species
-        </a>
+        <BackLink to="/species">All species</BackLink>
         <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,280px)_1fr]">
           {sp.image ? <Figure src={sp.image} alt={sp.name} tall caption={sp.look} /> : null}
           <div>
@@ -76,7 +75,7 @@ function SpeciesPage() {
                 return s ? (
                   <a
                     key={sid}
-                    href={`/species?id=${sid}`}
+                    href={withBase(`/species?id=${sid}`)}
                     className="rounded-sm border border-line px-3 py-2 text-sm text-paper no-underline hover:border-line-strong"
                   >
                     {s.name}
@@ -92,11 +91,11 @@ function SpeciesPage() {
         {SPECIES.map((s) => (
           <a
             key={s.id}
-            href={`/species?id=${s.id}`}
+            href={withBase(`/species?id=${s.id}`)}
             className="overflow-hidden rounded-lg border border-line bg-ink no-underline transition-colors duration-150 hover:border-line-strong"
           >
             {s.image ? (
-              <img src={s.image} alt="" className="aspect-video w-full object-cover object-top" />
+              <img src={withBase(s.image)} alt="" className="aspect-video w-full object-cover object-top" />
             ) : null}
             <div className="p-4">
               <p className="font-display text-lg text-paper">{s.name}</p>

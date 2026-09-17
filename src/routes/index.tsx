@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/site/shell";
 import { Figure, Kicker } from "@/components/site/ui";
 import { LOOK, PALETTE, RULES, STYLE_NAME } from "@/data/identity";
+import { withBase } from "@/lib/base";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -96,7 +97,7 @@ function Home() {
           ].map(([to, name, blurb]) => (
             <a
               key={to}
-              href={to}
+              href={withBase(to)}
               className="rounded-lg border border-line bg-ink p-5 no-underline transition-colors duration-150 hover:border-line-strong"
             >
               <p className="font-display text-xl text-paper">{name}</p>
@@ -119,7 +120,7 @@ function Home() {
             ["/art/aeltharion.jpg", "Aeltharion"],
           ].map(([src, name]) => (
             <figure key={src} className="overflow-hidden rounded-lg bg-raised">
-              <img src={src} alt={name} className="aspect-[2/3] w-full object-cover" />
+              <img src={withBase(src)} alt={name} className="aspect-[2/3] w-full object-cover" />
               <figcaption className="px-3 py-2 text-xs uppercase tracking-nav text-mute">{name}</figcaption>
             </figure>
           ))}

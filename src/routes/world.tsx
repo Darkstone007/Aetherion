@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/site/shell";
-import { Figure, PageTitle, ThreadChips, WideCard } from "@/components/site/ui";
+import { BackLink, Figure, PageTitle, ThreadChips, WideCard } from "@/components/site/ui";
 import { THREADS } from "@/data/continuity";
 import { GODS } from "@/data/gods";
 import { PEOPLE } from "@/data/people";
 import { SPECIES } from "@/data/species";
 import { CONTINENTS } from "@/data/world";
+import { withBase } from "@/lib/base";
 
 type Search = { id?: string };
 
@@ -28,14 +29,23 @@ function WorldPage() {
 
     return (
       <Shell>
-        <a href="/world" className="text-xs uppercase tracking-nav text-anima no-underline">
-          All continents
-        </a>
+        <BackLink to="/world">All continents</BackLink>
         <h1 className="mt-6 font-display text-3xl">{land.name}</h1>
         <p className="mt-2 text-mute">{land.theme}</p>
         <div className="mt-8">
           <Figure src={land.image} alt={`${land.name} with its inhabitants`} caption={land.light} />
         </div>
+        <section className="mt-10">
+          <h2 className="font-display text-xl">Cities and places, other angles</h2>
+          <p className="mt-2 text-sm text-mute">
+            Same land, different standing-places. Inhabitants stay in the frame.
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            {land.views.map((v) => (
+              <Figure key={v.src} src={v.src} alt={v.place} caption={`${v.place}. ${v.caption}`} />
+            ))}
+          </div>
+        </section>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <article className="rounded-lg border border-line bg-ink p-5">
             <h2 className="font-display text-xl">Terrain</h2>
@@ -64,7 +74,7 @@ function WorldPage() {
               s ? (
                 <a
                   key={s.id}
-                  href={`/species?id=${s.id}`}
+                  href={withBase(`/species?id=${s.id}`)}
                   className="rounded-sm border border-line px-3 py-2 text-sm text-paper no-underline hover:border-line-strong"
                 >
                   {s.name}
@@ -82,7 +92,7 @@ function WorldPage() {
               return (
                 <a
                   key={gid}
-                  href={`/gods?id=${gid}`}
+                  href={withBase(`/gods?id=${gid}`)}
                   className="rounded-sm border border-line px-3 py-2 text-sm text-paper no-underline hover:border-line-strong"
                 >
                   {label}
@@ -97,7 +107,7 @@ function WorldPage() {
             {named.map((p) => (
               <a
                 key={p.id}
-                href={`/people?id=${p.id}`}
+                href={withBase(`/people?id=${p.id}`)}
                 className="rounded-sm border border-line px-3 py-2 text-sm text-paper no-underline hover:border-line-strong"
               >
                 {p.name}
@@ -121,7 +131,7 @@ function WorldPage() {
       <PageTitle
         kicker="World"
         title="Seven continents, inhabited"
-        lead="Each land is drawn with its peoples in the frame — humans and centaurs on Elysara’s bridges, naga on Xihuang’s temple steps, dwarves at Nordheim’s anvil. Open a continent for rulers, beasts, gods, cities, and the story-tie. Species and creatures have their own tabs."
+        lead="Each land is drawn with its peoples in the frame — humans and centaurs on Elysara’s bridges, naga on Xihuang’s temple steps, dwarves at Nordheim’s anvil. Open a continent for cities from other angles, rulers, beasts, gods, and the story-tie."
       />
       <Figure src="/art/world.jpg" alt="Aetherion world key" caption="Fracture Hour. The lattice is the sky." />
       <div className="mt-10 grid gap-4 md:grid-cols-2">

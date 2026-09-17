@@ -27,6 +27,23 @@ export const CONTINENTS: Continent[] = [
     name: "Elysara",
     theme: "European high fantasy, chivalric, wind-scarred night spire-city.",
     image: "/art/elysara.jpg",
+    views: [
+      {
+        src: "/art/elysara-echoes.jpg",
+        place: "City of Echoes",
+        caption: "High aerial. Wind-scarred night spires, cracked lattice sky, humans and centaurs on the bridges. Azrael’s starting city.",
+      },
+      {
+        src: "/art/elysara-cloudreach.jpg",
+        place: "Cloudreach Freeholds",
+        caption: "From below. Hanging sky-villages, birdmen traders, storm-risk markets. Lirael’s sky-law.",
+      },
+      {
+        src: "/art/elysara-fields.jpg",
+        place: "Endless Azure Fields",
+        caption: "Ground-level grassland. Centaur riders on the ridge, village tents, a wind-serpent in the sky.",
+      },
+    ],
     light: "Cyan aurora over floating isles. Magenta window-glow. Lattice cracked across Fracture Hour.",
     terrain: "Alpine plateaus, Endless Azure Fields, ethereal bridges, City of Echoes, Echelon Spire, Sunspire Towers, underground voids.",
     culture: "Knightly orders, bardic sagas, guild pacts under Aeltharion’s broken mandate. Tournaments. Roasted eagle and celestial meads. Vigor welcomed; Shadowfolk distrusted.",
@@ -45,6 +62,23 @@ export const CONTINENTS: Continent[] = [
     name: "Xihuang",
     theme: "East-Asian mystic harmony with cyber-qi: bamboo megacity, jade veins, neon-bamboo scaffolding.",
     image: "/art/xihuang.jpg",
+    views: [
+      {
+        src: "/art/xihuang-isychros.jpg",
+        place: "Isychros Capital",
+        caption: "Street-level. Bamboo megacity, jade pagodas, neon-bamboo scaffolding, naga on temple steps. Kaisetsu rebuilt this after the Forge Wars.",
+      },
+      {
+        src: "/art/xihuang-jadevein.jpg",
+        place: "Jadevein Jungles",
+        caption: "From a temple terrace. Mana-veined jade trees, naga coils on the stairs, elves at vein-shrines. Sylvarith’s country.",
+      },
+      {
+        src: "/art/xihuang-spirit.jpg",
+        place: "Spirit River ports",
+        caption: "From a riverboat. Lantern barges, merfolk wardens, maple palaces. Mei Lin’s trade routes.",
+      },
+    ],
     light: "Cyan qi-mist. Magenta lantern-sign as graphic shape. Wet chrome streets.",
     terrain: "Jadevein Jungles, maple palaces, mana-veined pagodas, spiritual rivers, neon-bamboo scaffolding, Void Lotus Lakes.",
     culture: "Ki dojos, tea law, species-weaving, imperial intrigue. Balance through evolution. Spirit-herb dumplings, sake rice.",
@@ -63,6 +97,23 @@ export const CONTINENTS: Continent[] = [
     name: "Nordheim",
     theme: "Norse forge-chivalry. Ice that remembers fire.",
     image: "/art/nordheim.jpg",
+    views: [
+      {
+        src: "/art/nordheim-ironhold.jpg",
+        place: "Ironhold",
+        caption: "Low angle at the forge gates. Dwarves and golems at the anvil, cyan quench, magenta sparks. Durak’s city.",
+      },
+      {
+        src: "/art/nordheim-feralfell.jpg",
+        place: "Feralfell Wilds",
+        caption: "Ridge view. Beast Men packs, werewolves at moon-edge, frost trees. Rengar’s hunt-law.",
+      },
+      {
+        src: "/art/nordheim-shadowvoid.jpg",
+        place: "Shadowvoid Enclaves",
+        caption: "Interior cavern city. Shadowfolk veil-architecture, moon-white lanterns. Nyxara’s inverse rise.",
+      },
+    ],
     light: "Ember-cyan quench. Magenta sparks. Glacier mist over rune fjords.",
     terrain: "Feralfell Wilds, frost mountains, Ironcrag Forges, Morphic Wilds, shadow voids.",
     culture: "Clan honor, relic-smithing, mead-oaths, rune tattoos. Tradition slows innovation on purpose. Smoked boar, mead-soaked grains.",
@@ -81,6 +132,23 @@ export const CONTINENTS: Continent[] = [
     name: "Tezcal",
     theme: "Mesoamerican-African feral. Crystal savanna, obsidian law.",
     image: "/art/tezcal.jpg",
+    views: [
+      {
+        src: "/art/tezcal-krystallis.jpg",
+        place: "Krystallis",
+        caption: "High angle over stepped crystal pyramids. Living-gem architecture, phoenixkin on the terraces. Rhaskor’s gem-law.",
+      },
+      {
+        src: "/art/tezcal-embercrag.jpg",
+        place: "Embercrag",
+        caption: "From a lava-bridge. Volcanic strongholds, elementals, phoenixkin ash-shrines. Ignaroth’s heat.",
+      },
+      {
+        src: "/art/tezcal-obsidian.jpg",
+        place: "Obsidian tribal holds",
+        caption: "Ground-level war camp. Orc chieftains, obsidian totems, raid-fires. Grimgor’s counterweight to the gem courts.",
+      },
+    ],
     light: "Magenta lava. Cyan crystal. Chrome heat-haze over stepped pyramids.",
     terrain: "Embercrag volcanoes, Crystal Savannas, Krystallis gem-cities, Stormrift Peaks, Riftweave Chasms.",
     culture: "Hunt-rites, living artifacts, forbidden Awakenings at the edge of chaos. Crystal fire dances. Spiced ostrich, gem-dusted flatbreads.",
@@ -99,6 +167,23 @@ export const CONTINENTS: Continent[] = [
     name: "Abyssara",
     theme: "Oceanic abyssal. The sea as a second sky.",
     image: "/art/abyssara.jpg",
+    views: [
+      {
+        src: "/art/abyssara-depthcall.jpg",
+        place: "Depthcall",
+        caption: "Underwater looking up. Coral-and-ice towers, merfolk courts, bioluminescence from below. Aquara’s tidal metropolis.",
+      },
+      {
+        src: "/art/abyssara-dunes.jpg",
+        place: "Silk Dunes",
+        caption: "From a dune crest. Nomad khanate tents, harpy scouts. Alim’s hospitality and raid in the same hour.",
+      },
+      {
+        src: "/art/abyssara-ziggurat.jpg",
+        place: "Moonlit Ziggurat",
+        caption: "Low angle at the steps. Lunar oasis, fae jewelry-markets. False eternal-moon portals are Betrayer traps.",
+      },
+    ],
     light: "Cyan bioluminescence from below. Magenta moon. Chrome wave-foam.",
     terrain: "Deeptrench citadels, floating coral isles, Silk Dunes, lunar oases, Moonlit Ziggurats, Abyssal Ruins.",
     culture: "Tidal courts, siren law, moon-portals, veil dances. Spiced fish kebabs, silk-wrapped dates, moon-herb teas.",
@@ -117,6 +202,23 @@ export const CONTINENTS: Continent[] = [
     name: "Vindraeth",
     theme: "Forbidden land. Beauty that should not bloom.",
     image: "/art/vindraeth.jpg",
+    views: [
+      {
+        src: "/art/vindraeth-wilds.jpg",
+        place: "Blighted Wilds",
+        caption: "Beauty that should not bloom. Sickly cyan flowers on black, shadowfolk and ghosts between vine-ruins.",
+      },
+      {
+        src: "/art/vindraeth-spires.jpg",
+        place: "Shattered Spires",
+        caption: "Looking up at broken towers. Amulet-shard ruin, deathwardens on a collapsed bridge. No true city.",
+      },
+      {
+        src: "/art/vindraeth-camp.jpg",
+        place: "Rift camp",
+        caption: "Ground-level nomad camp. Ashen wardens, shadowvoid-silk tents, void-fire. Thorne’s profession is grief.",
+      },
+    ],
     light: "Cold cyan rift. Magenta wound in the lattice. Sickly bloom on black.",
     terrain: "Blighted Wilds, void rifts, Shattered Spires, vine-woven ruins. No true city.",
     culture: "Survival taboos. Deathwardens. Silent vigils. Mutated beast-roast over void fires.",
@@ -135,6 +237,23 @@ export const CONTINENTS: Continent[] = [
     name: "Caelus Prime",
     theme: "Mytho-cosmic. The System as architecture of heaven.",
     image: "/art/caelus.jpg",
+    views: [
+      {
+        src: "/art/caelus-hub.jpg",
+        place: "Caelus Hub",
+        caption: "High cosmic plaza. The System as architecture of heaven. Elves and aliens on floating platforms.",
+      },
+      {
+        src: "/art/caelus-meadows.jpg",
+        place: "Star Meadows",
+        caption: "Ground among glowing grass. Soul-beasts with cyan departed light. Guardians, not pets.",
+      },
+      {
+        src: "/art/caelus-noverra.jpg",
+        place: "Noverra labs",
+        caption: "Reactor interior. Alien researchers, cyan lattice, tech that is still Anima. Zayden’s daredevil invention.",
+      },
+    ],
     light: "Cyan nebula. Magenta star-fall. Chrome HUD geometry that is the building.",
     terrain: "Star Meadows, floating plateaus, astral lakes, Timeloop Ruins, Aeon Fragments.",
     culture: "Council of watchers. Prophecy as policy. Level 2000+ trials. Aether fruits, star essences.",
